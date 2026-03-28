@@ -6,8 +6,8 @@ A full-stack CRUD application built with the MERN stack (MongoDB, Express.js, Re
 
 This application extends a starter authentication project with full CRUD (Create, Read, Update, Delete) operations for workout management. Users can register, log in, and manage their personal workout logs with details like exercise name, category, duration, sets, reps, weight, and calories burned.
 
-**Public URL:** http://3.25.81.63:5001 (Backend API)
-**Public URL:** http://3.25.81.63:3000 (Frontend)
+**Public URL:** http://3.107.212.191 (Frontend)
+**Public URL:** http://3.107.212.191/api (Backend API)
 
 ## Project Setup Instructions
 
