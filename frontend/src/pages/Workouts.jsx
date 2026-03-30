@@ -23,25 +23,28 @@ const Workouts = () => {
         setLoading(false);
       }
     };
-
-    if (user) {
-      fetchWorkouts();
-    }
+    if (user) fetchWorkouts();
   }, [user]);
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <p className="text-gray-500 text-lg">Loading workouts...</p>
+      <div className="flex justify-center items-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="text-4xl mb-3 animate-bounce">💪</div>
+          <p className="text-gray-500 font-medium">Loading your workouts...</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">
-        Personal Workout Tracker
-      </h1>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900">
+          My Workouts <span className="text-indigo-500">🏋️</span>
+        </h1>
+        <p className="text-gray-500 mt-1">Track and manage all your training sessions</p>
+      </div>
       <WorkoutForm
         workouts={workouts}
         setWorkouts={setWorkouts}
