@@ -49,5 +49,4 @@ jobs:
           git pull origin main
           cd backend && npm install
           cd ../frontend && npm install && npm run build
-          cd ..
-          pm2 restart all || pm2 start backend/server.js --name "backend"
+          cd backend && (pm2 restart backend || pm2 start server.js --name "backend") && pm2 save
