@@ -46,7 +46,8 @@ jobs:
       - name: Deploy to EC2
         run: |
           cd ~/IFN636
-          git pull origin main
+          git fetch origin main
+          git reset --hard origin/main
           cd backend && npm install
           cd ../frontend && npm install && npm run build
           cd ~/IFN636/backend && (pm2 restart backend || pm2 start server.js --name "backend") && pm2 save
